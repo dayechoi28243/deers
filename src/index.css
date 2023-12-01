@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.swiper {
+  --swiper-theme-color: #f4ac27;
+}
+
+.swiper-slide img{
+  opacity: 0;
+  transition: 0.7s 0.3s;
+  transform: translate(-50%, 0%);
+}
+
+.swiper-slide-active img{
+  opacity: 1;
+  transform: translate(-50%,-50%);
+}
+
+.spin-slow{
+  animation-name: spin-slow;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+@keyframes spin-slow {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}
+
+.shadow-about{
+  text-shadow: rgba(0,0,0,0.5) 1px 0 10px
+}
